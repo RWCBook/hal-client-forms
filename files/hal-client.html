@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <!-- 
+  /*******************************************************
+   * todo implementation
+   * hal-json HTML/SPA client engine
+   * May 2015
+   * Mike Amundsen (@mamund)
+   * Soundtrack : Red Clay - Freddie Hubbard (1970)
+   *******************************************************/
+  -->
+  <head>
+    <title>HAL</title>
+    <link href="./semantic.min.css" rel="stylesheet" />
+    <style>#dump {display:none;}</style>
+  </head>
+  <body>
+    <div id="toplinks"></div>
+    <h1 id="title" class="ui page header"></h1>
+    <div id="content"></div>
+    <div id="links"></div>
+    <div class="ui two column grid" style="margin-top: 2em">
+      <div class="column">
+        <div id="embedded" class="ui segments"></div>
+        <div id="properties"></div>
+      </div>
+      <div class="column">
+        <div id="form"></div>
+      </div>
+    </div>
+    <div>
+      <pre id="dump"></pre>
+    </div>
+  </body>
+  <script src="uritemplate.js">//na</script>  
+  <script src="dom-help.js">//na</script>  
+  <script src="hal-client.js">//na </script>
+  <script>
+    window.onload = function() {
+      var pg = hal();
+      pg.init("/home/", "TPS - Task Processing System");
+    }
+  </script>
+</html>

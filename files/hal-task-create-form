@@ -1,0 +1,18 @@
+{
+  "_links" : {
+    "self": {
+      "href": "/files/hal-task-create-form"
+    }
+  },
+  "_templates" : {
+    "default" : {
+      "title" : "Add Task",
+      "method":"post",
+      "properties": [
+        {"name":"title", "required":true, "value":"", "prompt":"Title"},
+        {"name":"tags", "value":"", "prompt":"Tags"},
+        {"name":"completeFlag", "required":false, "value":"false", "prompt":"Completed"}
+      ]
+    }
+  }
+}

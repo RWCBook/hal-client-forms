@@ -1,0 +1,20 @@
+{
+  "_links" : {
+    "self": {
+      "href": "/files/hal-task-edit"
+    }
+  },
+  "_templates" : {
+    "default" : {
+      "method":"put",
+      "properties": [
+        {"name":"id", "value":"{id}", "prompt":"ID", "readOnly":true},
+        {"name":"title","required":true, "value":"{title}", "prompt":"Title"},
+        {"name":"tags", "value":"{tags}", "prompt":"Tags"},
+        {"name":"completeFlag","value":"{completeFlag}", "prompt":"Completed"},
+        {"name":"assignedUser","value":"{assignedUser}", "prompt":"Assigned User"}
+      ]
+    }
+  }
+}
+  
