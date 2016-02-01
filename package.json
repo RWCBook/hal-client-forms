@@ -1,7 +1,7 @@
 {
-  "name": "TPS-HALClientA",
+  "name": "TPS-HALClientF",
   "version": "1.0.0",
-  "description": "TPS - Task Processing Service HAL-CLIENT ACTIVE for Web API",
+  "description": "TPS - Task Processing Service HAL-CLIENT Forms for Web API",
   "main": "app.js",
   "scripts": {
     "start": "node app.js"
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/RWCBook/hal-client-active.git"
+    "url": "https://github.com/RWCBook/hal-client-forms.git"
   },
   "keywords": [
     "hypermedia",
@@ -27,7 +27,8 @@
     "JSON",
     "RPC",
     "CRUD",
-    "Client"
+    "Client",
+    "HAL-FORMS"
   ],
   "license": "MIT"
 }
