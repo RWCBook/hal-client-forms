@@ -170,7 +170,7 @@ function sendItemPage(req, res, respond, id) {
       rel:["tasksByUser","collection"],root:root},coll);
     
     // item forms
-    tran = wstl.append({name:"userFormEdit",href:"/user/{key}",
+    tran = wstl.append({name:"userFormEdit",href:"/user/update/{key}",
       rel:["edit-form"],root:root},coll);
     tran = wstl.append({name:"userFormEditPost",href:"/user/update/{key}",
       rel:["post-edit","edit-form"],root:root},coll);
