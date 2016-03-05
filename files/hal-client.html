@@ -12,24 +12,34 @@
   <head>
     <title>HAL</title>
     <link href="./semantic.min.css" rel="stylesheet" />
-    <style>#dump {display:none;}</style>
+    <style>
+    #links, #properties, #dump {display:none;}
+    @media only screen and (max-width:767px) {
+      .ui.stackable.grid > .column:not(.row) {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
+    }
+    </style>
   </head>
   <body>
     <div id="toplinks"></div>
-    <h1 id="title" class="ui page header"></h1>
-    <div id="content"></div>
-    <div id="links"></div>
-    <div class="ui two column grid" style="margin-top: 2em">
-      <div class="column">
-        <div id="embedded" class="ui segments"></div>
-        <div id="properties"></div>
+    <div style="margin: 5em 1em">
+      <h1 id="title" class="ui page header"></h1>
+      <div id="content" style="margin-bottom: 1em"></div>
+      <div id="links" style="margin-bottom: 1em"></div>
+      <div class="ui mobile reversed two column stackable grid">
+        <div class="column">
+          <div id="embedded" class="ui segments"></div>
+          <div id="properties"></div>
+        </div>
+        <div class="column">
+          <div id="form"></div>
+        </div>
       </div>
-      <div class="column">
-        <div id="form"></div>
+      <div>
+        <pre id="dump"></pre>
       </div>
-    </div>
-    <div>
-      <pre id="dump"></pre>
     </div>
   </body>
   <script src="uritemplate.js">//na</script>  

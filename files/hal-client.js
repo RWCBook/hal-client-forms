@@ -131,24 +131,41 @@ function hal() {
 
           a = d.anchor({
             rel:link,
+            className: "item",
             href:coll[link].href.replace('{key}',id),
             title:(coll[link].title||coll[link].href.replace('{key}',id)),
             text:(coll[link].title||coll[link].href.replace('{key}',id))
           });
-          
+
           // add internal attributes
           a.setAttribute("templated", coll[link].templated||"false");
           a = halAttributes(a,coll[link]);
           
-          item = d.node("li");
+          item = d.node("div");
+          if (elm.id !== "links" && elm.id !== "toplinks") {
+            item.className = "ui basic blue link item action button";
+          }
           item.onclick = halLink;
-          item.className = "item";
           
           d.push(a, item);
           d.push(item, menu);
         }
       }
       d.push(menu, elm);
+    }
+    if (menu.hasChildNodes()) {
+      elm.style.display = "block";
+    } else {
+      elm.style.display = "none";
+    }
+
+    if (elm.id === "links") {
+      menu.className += " stackable";
+    } else if (elm.id === "toplinks") {
+      menu.className += " fixed top";
+    } else {
+      // use mini buttons for item actions
+      menu.className = "ui mini buttons";
     }
   }
 
@@ -195,7 +212,7 @@ function hal() {
           
           // emit all the properties for this item
           table = d.node("table");
-          table.className = "ui very basic collapsing celled table";
+          table.className = "ui table";
           for(var prop of g.fields[g.context]) {
             if(itm[prop]) {
               tr = d.data_row({className:"property "+prop,text:prop+"&nbsp;",value:itm[prop]+"&nbsp;"});
@@ -211,6 +228,11 @@ function hal() {
           selectLinks("item",itm.id, itm);          
         }        
       }
+    }
+    if (elm.hasChildNodes()) {
+      elm.style.display = "block";
+    } else {
+      elm.style.display = "none";
     }
   }
   
@@ -241,6 +263,12 @@ function hal() {
 
     d.push(table,segment);
     d.push(segment,elm);
+
+    if (table.hasChildNodes()) {
+      elm.style.display = "block";
+    } else {
+      elm.style.display = "none";
+    }
 
     // emit any item-level links
     if(g.hal && g.hal.id) {
@@ -276,7 +304,7 @@ function hal() {
     coll = f.properties;
     for(var prop of coll) {
       segment = d.node("div");
-      segment.className = "ui segment";
+      segment.className = "ui green segment";
 
       val = prop.value;
       if(g.hal[prop.name]) {
@@ -300,14 +328,14 @@ function hal() {
     p = d.node("p");
     inp = d.node("input");
     inp.type = "submit";
-    inp.className = "ui mini positive button";
+    inp.className = "ui mini positive submit button";
     d.push(inp,p);
 
     inp = d.node("input");
     inp.type = "button";
     inp.value = "Cancel";
     inp.onclick = function(){elm = d.find("form");d.clear(elm);}
-    inp.className = "ui mini button";
+    inp.className = "ui mini cancel button";
     d.push(inp,p);
 
     d.push(p,fs);            
@@ -382,8 +410,9 @@ function hal() {
       // must be a simple HAL response, then
       req(fset.href, "get", null, null, fset.accept||g.ctype, null);
     }
+    return false;
   }
-  
+
   // handle all parameterized requests/form submits
   function halSubmit(e) {
     var form, query, nodes, i, x, args, url, method, template, accept;
@@ -449,7 +478,7 @@ function hal() {
       }
     }
   }
-  
+
   // export function
   var that = {};
   that.init = init;
