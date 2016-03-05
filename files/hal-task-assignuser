@@ -1,0 +1,17 @@
+{
+  "_links" : {
+    "self" : {
+      "href" : "/files/hal-task-assignuser"
+    }
+  },
+  "_templates" : {
+    "default" : {
+      "title" : "Assign User",
+      "method": "post",
+      "properties": [
+        {"name":"id","value":"{id}", "prompt":"ID","readOnly":true},
+        {"name":"assignedUser","value":"", "prompt":"AssignedUser","readOnly":true}
+      ]
+    }
+  }
+}
