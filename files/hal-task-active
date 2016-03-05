@@ -1,0 +1,16 @@
+{
+  "_links" : {
+    "self" : {
+      "href" : "/files/hal-task-active"
+    }
+  },
+  "_templates" : {
+    "default" : {
+      "title" : "Active Tasks",
+      "method": "get",
+      "properties": [
+        {"name":"completeFlag","value":"false", "prompt":"Completed", "readOnly":true}
+      ]
+    }
+  }
+}
