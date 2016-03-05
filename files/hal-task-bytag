@@ -1,0 +1,16 @@
+{
+  "_links" : {
+    "self" : {
+      "href" : "/files/hal-task-bytag"
+    }
+  },
+  "_templates" : {
+    "default" : {
+      "title" : "Search By Tag",
+      "method": "get",
+      "properties": [
+        {"name":"tags","value":"", "prompt":"Tags","required":true}
+      ]
+    }
+  }
+}

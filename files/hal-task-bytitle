@@ -1,0 +1,16 @@
+{
+  "_links" : {
+    "self" : {
+      "href" : "/files/hal-task-bytitle"
+    }
+  },
+  "_templates" : {
+    "default" : {
+      "title" : "Search By Title",
+      "method": "get",
+      "properties": [
+        {"name":"title","value":"", "prompt":"Title","required":true}
+      ]
+    }
+  }
+}
