@@ -1,0 +1,19 @@
+{
+  "_links" : {
+    "self" : {
+      "href" : "/files/hal-user-chaangepw"
+    }
+  },
+  "_templates" : {
+    "default" : {
+      "title" : "Change Password",
+      "method": "post",
+      "properties": [
+        {"name":"id","value":"{id}", "prompt":"ID","readOnly":true},
+        {"name":"oldpass","value":"", "prompt":"Old Password","required":true, "pattern":"[a-zA-Z0-9!@#$%^&*-]+"},
+        {"name":"newpass","value":"", "prompt":"New Password","required":true, "pattern":"[a-zA-Z0-9!@#$%^&*-]+"},
+        {"name":"checkpass","value":"", "prompt":"Confirm Password","required":true, "pattern":"[a-zA-Z0-9!@#$%^&*-]+"}
+      ]
+    }
+  }
+}
