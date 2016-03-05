@@ -279,7 +279,7 @@ function hal() {
   // show form for input
   // see the halForms() lib for inputs
   function halShowForm(hf, href, title) {
-    var elm, coll, val, hf;
+    var elm, coll, val, f;
     var form, header, fs, p, inp;
      
     elm = d.find("form");
