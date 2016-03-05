@@ -1,0 +1,16 @@
+{
+  "_links" : {
+    "self" : {
+      "href" : "/files/hal-user-usersbynick"
+    }
+  },
+  "_templates" : {
+    "default" : {
+      "title" : "Search By Nick",
+      "method": "get",
+      "properties": [
+        {"name":"nick","value":"", "prompt":"Nickname", "required":true}
+      ]
+    }
+  }
+}
