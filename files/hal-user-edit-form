@@ -1,0 +1,18 @@
+{
+  "_links" : {
+    "self" : {
+      "href" : "/files/hal-user-edit-form"
+    }
+  },
+  "_templates" : {
+    "default" : {
+      "title" : "Edit User",
+      "method": "put",
+      "properties": [
+        {"name":"id","value":"{id}", "prompt":"ID","readOnly":true},
+        {"name":"nick","value":"{nick}", "prompt":"Nickname","readOnly":true},
+        {"name":"name", "value":"{name}", "prompt":"Full Name", "required":true}
+      ]
+    }
+  }
+}

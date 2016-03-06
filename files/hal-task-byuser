@@ -1,0 +1,16 @@
+{
+  "_links" : {
+    "self" : {
+      "href" : "/files/hal-task-byuser"
+    }
+  },
+  "_templates" : {
+    "default" : {
+      "title" : "Search By User",
+      "method": "get",
+      "properties": [
+        {"name":"assignedUser","value":"", "prompt":"Assigned User","required":true}
+      ]
+    }
+  }
+}

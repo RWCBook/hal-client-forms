@@ -1,0 +1,18 @@
+{
+  "_links" : {
+    "self" : {
+      "href" : "/files/hal-user-create-form"
+    }
+  },
+  "_templates" : {
+    "default" : {
+      "title" : "Add User",
+      "method": "post",
+      "properties": [
+        {"name":"nick","value":"", "prompt":"Nickname","required":true,"pattern":"[a-zA-Z0-9]+"},
+        {"name":"password","required":true,"value":"", "prompt":"Password","pattern":"[a-zA-Z0-9!@#$%^&*-]+"},
+        {"name":"name", "value":"", "prompt":"Full Name", "required":true}
+      ]
+    }
+  }
+}

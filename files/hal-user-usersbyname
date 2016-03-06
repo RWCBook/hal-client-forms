@@ -1,0 +1,16 @@
+{
+  "_links" : {
+    "self" : {
+      "href" : "/files/hal-user-usersbyname"
+    }
+  },
+  "_templates" : {
+    "default" : {
+      "title" : "Search By Name",
+      "method": "get",
+      "properties": [
+        {"name":"name","value":"", "prompt":"Full Name", "required":true}
+      ]
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "_links" : {
+    "self" : {
+      "href" : "/files/hal-task-markcompleted"
+    }
+  },
+  "_templates" : {
+    "default" : {
+      "title" : "Mark Completed",
+      "method": "post",
+      "properties": [
+        {"name":"id","value":"{id}", "prompt":"ID","readOnly":true},
+        {"name":"completeFlag","value":"true", "prompt":"Completed","readOnly":true}
+      ]
+    }
+  }
+}

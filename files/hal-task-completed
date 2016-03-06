@@ -1,0 +1,16 @@
+{
+  "_links" : {
+    "self" : {
+      "href" : "/files/hal-task-completed"
+    }
+  },
+  "_templates" : {
+    "default" : {
+      "title" : "Completed Tasks",
+      "method": "get",
+      "properties": [
+        {"name":"completeFlag","value":"true", "prompt":"Completed", "readOnly":true}
+      ]
+    }
+  }
+}

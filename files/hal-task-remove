@@ -1,0 +1,16 @@
+{
+  "_links" : {
+    "self" : {
+      "href" : "/files/hal-task-remove"
+    }
+  },
+  "_templates" : {
+    "default" : {
+      "title" : "Remove Task",
+      "method": "delete",
+      "properties": [
+        {"name":"id", "required":true, "value":"{id}", "prompt":"ID", "readOnly":true}
+      ]
+    }
+  }
+}
